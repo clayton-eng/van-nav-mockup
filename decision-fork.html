@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>buywithvan.com — "The Decision Fork" TLN (Mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#006EB6;--lime:#B3DD00;--ink:#2E2E2E;--navy:#1B3A5C;--lt:#E8F0F8;--mut:#888888;--line:#e3e8ee}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Open Sans',Arial,sans-serif;color:var(--ink);background:#f4f6f9;line-height:1.6;padding:32px 16px}
+  h1,h2,h3{font-family:'Raleway',Arial,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto}
+  .lead{text-align:center;margin-bottom:22px}
+  .lead h1{font-size:26px;font-weight:800;color:var(--navy)}
+  .lead p{color:var(--mut);font-size:15px;margin-top:6px}
+  .badge{display:inline-block;background:var(--lt);color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:14px}
+  .section-label{font-family:'Raleway';font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:32px 0 12px}
+
+  .browser{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 24px rgba(27,58,92,.08)}
+  .chrome{display:flex;align-items:center;gap:8px;padding:11px 14px;background:#f0f2f5;border-bottom:1px solid var(--line);border-radius:12px 12px 0 0}
+  .dot{width:11px;height:11px;border-radius:50%}
+  .url{flex:1;margin-left:10px;background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 12px;font-size:13px;color:#5a6b7b}
+
+  nav{display:flex;align-items:center;padding:0 20px;height:72px;background:#fff;border-radius:0 0 12px 12px;position:relative}
+  .logo{font-family:'Raleway';font-weight:800;font-size:23px;color:var(--blue);letter-spacing:-.5px}
+  .logo span{color:var(--lime);-webkit-text-stroke:.4px var(--navy)}
+  .menu{display:flex;align-items:center;gap:2px;margin-left:26px}
+  .slot{font-family:'Raleway';font-weight:600;font-size:14.5px;color:var(--ink);padding:25px 12px;white-space:nowrap;cursor:pointer}
+  .slot .chev{font-size:9px;color:var(--mut)}
+  .slot.active{color:var(--blue);border-bottom:2px solid var(--blue)}
+  .spacer{flex:1}
+  .right{display:flex;align-items:center;gap:14px}
+  .ph{font-family:'Raleway';font-weight:700;font-size:13.5px;color:var(--navy);text-decoration:none;white-space:nowrap}
+  .rlink{font-family:'Raleway';font-weight:600;font-size:13.5px;color:var(--blue);text-decoration:none;white-space:nowrap}
+  .cta{font-family:'Raleway';font-weight:700;font-size:13.5px;background:var(--lime);color:var(--navy);text-decoration:none;padding:10px 18px;border-radius:8px;white-space:nowrap}
+
+  /* open Source Cars dropdown */
+  .drop{position:absolute;top:70px;left:104px;width:340px;background:#fff;border:1px solid var(--line);border-radius:11px;
+        box-shadow:0 16px 38px rgba(27,58,92,.18);padding:9px;z-index:10}
+  .ov{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:7px;background:var(--lt)}
+  .ov b{font-family:'Raleway';font-size:14px;color:var(--navy)}
+  .ov span{font-size:11.5px;color:var(--blue);font-weight:600}
+  .lane{font-family:'Raleway';font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);
+        margin:12px 12px 4px;display:flex;align-items:center;gap:7px}
+  .lane.l1{color:#1d7a45} .lane.l2{color:#8a5a05}
+  .dot-l{width:7px;height:7px;border-radius:50%} .l1 .dot-l{background:#1d9e75} .l2 .dot-l{background:#ef9f27}
+  .di{display:block;font-size:13.5px;color:var(--ink);text-decoration:none;padding:8px 12px;border-radius:7px}
+  .di:hover{background:var(--lt);color:var(--blue)}
+  .di small{display:block;font-size:11.5px;color:var(--mut)}
+  .di.head{font-weight:700;color:var(--navy)}
+  .bridge{margin:10px 8px 4px;padding:10px 12px;border:1px solid #d9c7a0;background:#fffaf0;border-radius:8px}
+  .bridge b{font-family:'Raleway';font-size:13px;color:#8a5a05;display:block}
+  .bridge small{font-size:11.5px;color:#9a7b3a}
+  .proof{display:block;text-align:center;font-family:'Raleway';font-weight:700;font-size:13px;color:var(--blue);text-decoration:none;padding:10px;margin-top:6px;border-top:1px solid var(--line)}
+
+  .cols{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .col{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .col-h{background:var(--navy);color:#fff;font-family:'Raleway';font-weight:700;font-size:13px;padding:11px 13px}
+  .col-h small{display:block;font-weight:400;font-size:11px;color:#b9c6d6}
+  .col ul{list-style:none;padding:5px 6px}
+  .col li{font-size:12.5px;padding:7px 9px;border-radius:5px;color:var(--ink)}
+  .col li.sub{color:var(--mut);font-size:10.5px;font-family:'Raleway';font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding-bottom:2px}
+  .col li.flat{color:var(--mut);font-style:italic;padding:9px}
+
+  .pages{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px 20px;margin-top:14px}
+  .pages h4{font-family:'Raleway';font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+  .prow{display:flex;align-items:center;gap:12px;padding:7px 0;border-top:1px solid #eef2f6;font-size:13.5px}
+  .prow:first-of-type{border-top:none}
+  .pri{font-family:'Raleway';font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:11px;white-space:nowrap}
+  .pri.h{background:#e7f5ec;color:#1d7a45} .pri.m{background:#fff3da;color:#8a5a05} .pri.l{background:#f1f3f6;color:#8a96a3}
+  .prow code{background:var(--lt);color:var(--blue);padding:1px 6px;border-radius:5px;font-size:12px}
+  .prow span{color:#5a646e}
+  .foot{text-align:center;color:var(--mut);font-size:12.5px;margin-top:26px;line-height:1.7;border-top:1px solid var(--line);padding-top:16px}
+  @media(max-width:820px){.cols{grid-template-columns:1fr 1fr}.drop{position:static;width:auto;margin:0 14px 8px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lead">
+    <div class="badge">Mockup — tournament winner · not live</div>
+    <h1>“The Decision Fork” — proposed top navigation</h1>
+    <p>5 slots · the software-vs-managed moat made visible · VINCUE’s confidence without its blind spots</p>
+  </div>
+
+  <div class="section-label">The bar — with Source Cars opened</div>
+  <div class="browser">
+    <div class="chrome"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span>
+      <span class="url">buywithvan.com</span></div>
+    <nav>
+      <span class="logo">VA<span>N</span></span>
+      <div class="menu">
+        <span class="slot">How It Works</span>
+        <span class="slot active">Source Cars <span class="chev">▲</span></span>
+        <span class="slot">Pricing</span>
+        <span class="slot">Customers</span>
+        <span class="slot">Resources <span class="chev">▼</span></span>
+      </div>
+      <div class="spacer"></div>
+      <div class="right">
+        <a class="ph" href="#">855-952-4949</a>
+        <a class="rlink" href="#">Dealer Login</a>
+        <a class="rlink" href="#">Contact</a>
+        <a class="cta" href="#">Book Your Demo</a>
+      </div>
+
+      <div class="drop">
+        <a class="ov" href="#"><b>Source Cars Overview</b><span>see both lanes →</span></a>
+        <div class="lane l1"><span class="dot-l"></span>Run it yourself</div>
+        <a class="di head" href="#">Software <small>the acquisition platform your team runs</small></a>
+        <a class="di" href="#">The Path to Purchasing™</a>
+        <a class="di" href="#">Integrations</a>
+        <div class="lane l2"><span class="dot-l"></span>Let VAN run it</div>
+        <a class="di head" href="#">Managed Buyer Program <small>done-for-you — VAN sources cars for you</small></a>
+        <a class="di" href="#">Acquisition Coaches</a>
+        <div class="bridge"><b>Hiring vs. Outsourcing a Buyer</b><small>Which lane is right for your store?</small></div>
+        <a class="proof" href="#">See a Dealer Win →</a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="section-label" style="margin-top:24px">All five slots at a glance</div>
+  <div class="cols">
+    <div class="col">
+      <div class="col-h">How It Works<small>flat · NEW page</small></div>
+      <ul><li class="flat">Category explainer →<br>the #1 first-visit question</li></ul>
+    </div>
+    <div class="col">
+      <div class="col-h">Source Cars<small>dropdown</small></div>
+      <ul>
+        <li>Overview</li>
+        <li class="sub">Run it yourself</li>
+        <li>Software</li><li>Path to Purchasing™</li><li>Integrations</li>
+        <li class="sub">Let VAN run it</li>
+        <li>Managed Buyer Program</li><li>Acquisition Coaches</li>
+        <li class="sub">The bridge</li>
+        <li>Hiring vs. Outsourcing</li><li>See a Dealer Win →</li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="col-h">Pricing<small>flat · one click</small></div>
+      <ul><li class="flat">Stays top-level —<br>transparency as a weapon vs gated rivals</li></ul>
+    </div>
+    <div class="col">
+      <div class="col-h">Customers<small>flat · NEW page</small></div>
+      <ul><li class="flat">Filterable proof hub<br>by dealer type + lane</li></ul>
+    </div>
+    <div class="col">
+      <div class="col-h">Resources<small>dropdown</small></div>
+      <ul>
+        <li>Resource Center</li><li>Case Studies</li><li>Guides</li>
+        <li>How to Buy FSBO Cars</li><li>Blog</li><li>FAQs</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pages">
+    <h4>New pages this requires</h4>
+    <div class="prow"><span class="pri h">HIGH</span><code>/source-cars</code><span>Overview framing the two lanes — anchor for the product door</span></div>
+    <div class="prow"><span class="pri h">HIGH</span><code>/how-it-works</code><span>Flat explainer — the category’s #1 first-visit question</span></div>
+    <div class="prow"><span class="pri h">HIGH</span><code>/customers</code><span>Filterable proof hub; spokes at /customers/[slug]</span></div>
+    <div class="prow"><span class="pri h">HIGH</span><code>/integrations</code> + <code>/integrations/kbb-ico</code><span>Hub + first spoke on the clean-URL convention</span></div>
+    <div class="prow"><span class="pri m">MED</span><code>/guides</code><span>Convert gated “Ebooks” → crawlable hub (gate the download, not the page)</span></div>
+    <div class="prow"><span class="pri l">LOW</span><code>/integrations/how-it-works</code><span>De-risk adoption for non-technical dealers</span></div>
+  </div>
+
+  <div class="foot">
+    Mockup for review only — the live site is unchanged. All-dropdown (no mega-menu) so it builds natively in HubSpot with zero custom code.<br>
+    Phone shown as click-to-call per the panel’s recommendation — flagged for your call. Brand colors approximate (VAN Blue #006EB6, VAN Lime #B3DD00).
+  </div>
+
+</div>
+</body>
+</html>
