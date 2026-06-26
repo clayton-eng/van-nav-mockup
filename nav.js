@@ -18,12 +18,12 @@
     {label:'Pricing', href:'pricing.html', slot:'pricing'},
     {label:'Customers', href:'customers.html', slot:'customers'},
     {label:'Resources', slot:'resources', panel:[
-      {t:'link', label:'Resource Center', href:'resources.html'},
       {t:'link', label:'Case Studies', href:'case-studies.html'},
       {t:'link', label:'Guides', href:'guides.html'},
       {t:'link', label:'How to Buy FSBO Cars', href:'how-to-buy-fsbo-cars.html'},
       {t:'link', label:'Blog', href:'blog.html'},
-      {t:'link', label:'FAQs', href:'faqs.html'}
+      {t:'link', label:'FAQs', href:'faqs.html'},
+      {t:'proof', label:'Browse all resources →', href:'resources.html'}
     ]}
   ];
   function row(r){
